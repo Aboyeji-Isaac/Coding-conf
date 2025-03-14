@@ -1,0 +1,19 @@
+{
+  "name": "conference-ticket-generator-main",
+  "version": "1.0.0",
+  "description": "![Design preview for the Conference ticket generator coding challenge](./preview.jpg)",
+  "main": "script.js",
+  "scripts": {
+    "build-scss": "sass src/main.scss public/main.css",
+    "watch-scss": "sass --watch src/main.scss:public/main.css",
+    "build-css": "tailwindcss build src/tailwind.css -o public/tailwind.css"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "dependencies": {
+    "sass": "^1.85.1",
+    "tailwindcss": "^1.9.6"
+  }
+}

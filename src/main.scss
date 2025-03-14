@@ -1,0 +1,64 @@
+body {
+    background-image: 
+    url('/assets/images/pattern-squiggly-line-top.svg'),
+    url('/assets/images/pattern-squiggly-line-bottom-desktop.svg'),
+    url('/assets/images/pattern-lines.svg'),
+    url('/assets/images/background-desktop.png');
+    background-size: 400px, 700px, cover, cover;
+    width: auto, 50px, auto, auto;
+    background-position: 100% 10%, bottom left, center, center;
+    background-repeat: no-repeat;
+    position: relative; 
+    min-height: 100vh;
+    justify-items: center;
+    justify-content: center;
+
+  // For mobile screens (375px and below)
+  @media (max-width: 375px) {
+    background: none;
+    background-image:
+      url('/assets/images/pattern-squiggly-line-top-mobile.svg'),
+      url('/assets/images/pattern-squiggly-line-bottom-mobile.svg');
+      // url('/assets/images/pattern-lines.svg'),
+      // url('/assets/images/background-mobile.png');
+    background-size: 200px, 400px, 400px, cover;
+    background-position: top right, bottom left, center, center;
+  }
+}
+
+
+  
+  .pattern {
+    position: absolute;
+    background-repeat: no-repeat;
+    background-size: contain;
+    // z-index: 10; // Ensure it appears above the background
+
+    &.pattern-lines {
+        background-image: url('/assets/images/pattern-lines.svg');
+        z-index: 99;
+        width: 100px;
+        height: 100px;
+    }
+  
+    &.circle-top-left {
+      background-image: url('/assets/images/pattern-circle.svg');
+      width: 150px;
+      height: 150px;
+      top: -50px;
+      left: 20px;
+    }
+  
+    &.circle-center {
+      background-image: url('/assets/images/pattern-circle.svg');
+      width: 150px;
+      height: 150px;
+      top: 50%;
+      left: 70%;
+    //   transform: translate(-50%, -50%);
+    }
+    
+  }
+  
+
+  
