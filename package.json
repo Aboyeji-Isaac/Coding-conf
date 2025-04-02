@@ -15,5 +15,16 @@
   "dependencies": {
     "sass": "^1.85.1",
     "tailwindcss": "^1.9.6"
-  }
+  },
+  "devDependencies": {
+    "daisyui": "^1.5.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Aboyeji-Isaac/Coding-conf.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Aboyeji-Isaac/Coding-conf/issues"
+  },
+  "homepage": "https://github.com/Aboyeji-Isaac/Coding-conf#readme"
 }
