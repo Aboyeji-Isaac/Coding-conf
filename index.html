@@ -12,8 +12,12 @@
 </head>
 <body class="font-Inconsolata bg-secondary-neutral900 text-secondary-neutral500">
   
-  <div class="pattern md:justify-start md: -left-20 md:h-5  circle-top-left"></div>
-  <div class="pattern circle-center"></div>
+  <div class="absolute z-10 pattern md:justify-start md:-left-20 md:h-5  circle-top-left"></div>
+  <div class="pattern relative z-10 circle-center"></div>
+  <!-- <div class="bg-[url('/assets/images/pattern-squiggly-line-top.svg')] bg-no-repeat 
+    bg-cover sm:bg-[length:75%] md:bg-[length:50%] lg:bg-[length:25%] z-10">
+</div> -->
+
 
   <div class="items-center justify-center">
     <div class="bg-image">
@@ -38,7 +42,7 @@
                 class=""
               >
                 <div class="flex flex-col items-center justify-center">
-                  <div class="img_container rounded-xl items-center justify-center w-20 h-20 p-2">
+                  <div class="img_container rounded-xl items-center justify-center w-12 h-12 p-2">
                     <img src="assets/images/icon-upload.svg" class="w-full" alt="Upload Icon">
                   </div>
                   <p class="text-center">Drag and drop or click to upload</p>
@@ -48,20 +52,20 @@
             </label>
 
                     <!-- Image Preview + Buttons -->
-        <div id="image-container" class=" b_rad  p-4 hidden mt-4 flex flex-col items-center">
-          <img id="preview" src="" class="rounded-md w-20 h-20 border border-gray-300">
-          <div class="mt-3 flex gap-3">
-              <button onclick="removeImage()" class="px-2   text-secondary-neutral500 rounded-md img_btn hover:bg-secondary-neutral700 hover:text-secondary-neutral300">
+        <div id="image-container" class=" b_rad  p-4 hidden mt-2 flex flex-col items-center">
+          <img id="preview" src="" class="rounded-xl w-12 h-12 border border-gray-300">
+          <div class="mt-2 flex gap-3">
+              <button onclick="removeImage()" class="px-1   text-secondary-neutral500 rounded-md img_btn hover:bg-secondary-neutral700 hover:text-secondary-neutral300">
                   Remove Image
               </button>
               <button onclick="document.getElementById('file-upload').click()" 
-                  class="px-2   text-secondary-neutral500 rounded-md img_btn   hover:bg-secondary-neutral700 hover:text-secondary-neutral300">
+                  class="px-1   text-secondary-neutral500 rounded-md img_btn   hover:bg-secondary-neutral700 hover:text-secondary-neutral300">
                   Change Image
               </button>
           </div>
       </div>
 
-            <p class="py-2 flex text-xs">
+            <p id="avaterError" class="py-2  flex text-xs">
               <img src="assets/images/icon-info.svg" class="pr-3" alt="">
               Upload your photo (JPG or PNG, max size: 500KB).
             </p>
@@ -70,14 +74,23 @@
           <p class="p-2">Full Name</p>
           <input type="text"
           class="custom-dash border border-gray-500 bg-secondary-neutral500 bg-opacity-50 
-                 w-full rounded-md p-2 focus:outline-none focus:ring-2 focus:ring-blue-500">        
+                 w-full rounded-md p-2 focus:outline-none focus:ring-2 focus:ring-blue-500"> 
+                 <span id="fullNameErrorMessage" class="py-2 hidden flex text-xs">
+                  <img src="assets/images/icon-info.svg" class="pr-3" alt="">
+                 </span>       
           <p class="p-2">Email Address</p>
-          <input type="email" id="" placeholder="example@gmail.com" class="custom-dash border border-gray-500 bg-secondary-neutral500 bg-opacity-50 
+          <input type="email"  placeholder="example@gmail.com" class="custom-dash border border-gray-500 bg-secondary-neutral500 bg-opacity-50 
           w-full rounded-md p-2 focus:outline-none focus:ring-2 focus:ring-blue-500">
+          <span id="emailErrorMessage" class="py-2 hidden  flex text-xs">
+            <img src="assets/images/icon-info.svg" class="pr-3" alt="">
+          </span>
           <p class="p-2">GitHub Username</p>
           <input type="text" placeholder="@yourusername" class="custom-dash border border-gray-500 bg-secondary-neutral500 bg-opacity-50 
           w-full rounded-md p-2 focus:outline-none focus:ring-2 focus:ring-blue-500">
-          <button type="submit" class="p-4 w-full rounded-md mt-4 bg-primary-orange700 text-secondary-neutral900 font-black">Generate My Ticket</button>
+          <span id="githubErrorMessage" class="py-2 hidden  flex text-xs">
+            <img src="assets/images/icon-info.svg" class="pr-3" alt="">
+          </span>
+          <button" type="submit" class="p-4 w-full rounded-md mt-4 bg-primary-orange700 text-secondary-neutral900 font-black">Generate My Ticket</button>
         </form>
       </div>
       <!-- Form ends -->
@@ -87,9 +100,9 @@
 
 
   
-  <div class="attribution">
+  <div class="attribution text-center text-2xs md:text-2xs">
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
+    Coded by <a href="#">Aboyeji Isaac</a>.
   </div>
   <script src="JS/script.js"></script>
 </body>
